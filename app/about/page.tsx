@@ -30,7 +30,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl max-md:text-2xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
                 Founded in 2019, Vinayak Technoplast has grown from a small manufacturing unit to one of India's leading plastic packaging solution providers. Our commitment to quality and innovation has helped us build long-lasting relationships with clients across various industries.
               </p>
@@ -56,23 +56,23 @@ export default function About() {
       {/* Achievements */}
       <section className="py-16 bg-blue-50 border-t border-b border-blue-200">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-left mb-12">Our Achievements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold  mb-2">Industry Awards</h3>
-              <p className="text-gray-700">
+          <h2 className="text-3xl max-md:text-2xl font-bold text-left mb-12 max-md:mb-4">Our Achievements</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-md:gap-2">
+            <Card className="p-6 max-md:p-4 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl max-md:text-xl font-semibold  mb-2">Industry Awards</h3>
+              <p className="text-gray-700 max-md:text-sm">
                 Recognized as the leading innovator in the plastic packaging industry with multiple awards for product excellence and sustainable practices.
               </p>
             </Card>
-            <Card className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold  mb-2">Global Reach</h3>
-              <p className="text-gray-700">
+            <Card className="p-6 max-md:p-4 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl max-md:text-xl font-semibold  mb-2">Global Reach</h3>
+              <p className="text-gray-700 max-md:text-sm">
                 Our products are distributed worldwide, with partnerships spanning across North America, Europe, and Asia.
               </p>
             </Card>
-            <Card className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold  mb-2">Sustainability Initiatives</h3>
-              <p className="text-gray-700">
+            <Card className="p-6 max-md:p-4 bg-white shadow-md rounded-2xl hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl max-md:text-xl font-semibold  mb-2">Sustainability Initiatives</h3>
+              <p className="text-gray-700 max-md:text-sm">
                 We’ve significantly reduced our carbon footprint through energy-efficient production methods and the use of recyclable materials.
               </p>
             </Card>
@@ -83,7 +83,7 @@ export default function About() {
       {/* Future Vision */}
       <section className="py-16 bg-blue-100 border-t border-b border-blue-300">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-left mb-12">Our Vision for the Future</h2>
+          <h2 className="text-3xl max-md:text-2xl font-bold text-left mb-12 max-md:mb-4">Our Vision for the Future</h2>
           <p className="text-gray-800 text-lg text-left max-w-3xl">
             Looking ahead, we envision a future where our products are a cornerstone of sustainable packaging solutions worldwide. With ongoing innovation, we aim to reduce environmental impact and drive forward-thinking initiatives in the packaging industry.
           </p>
@@ -91,29 +91,29 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-white">
+      <section className="py-16 max-md:py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-left text-black mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-4xl max-md:text-2xl font-bold text-left text-black mb-12 max-md:mb-4">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-md:gap-4">
             <Card className="p-6 bg-gray-50 shadow-md rounded-2xl hover:bg-blue-50 transition-colors">
               <CheckCircle className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold  mb-2">Quality</h3>
-              <p className="text-gray-700">Commitment to delivering premium quality products that meet global standards.</p>
+              <h3 className="text-2xl max-md:text-lg font-semibold  mb-2">Quality</h3>
+              <p className="text-gray-700 max-md:text-sm">Commitment to delivering premium quality products that meet global standards.</p>
             </Card>
             <Card className="p-6 bg-gray-50 shadow-md rounded-2xl hover:bg-blue-50 transition-colors">
               <Users className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold  mb-2">Customer Focus</h3>
-              <p className="text-gray-700">Dedicated to exceeding customer expectations and ensuring satisfaction in every interaction.</p>
+              <h3 className="text-2xl max-md:text-lg font-semibold  mb-2">Customer Focus</h3>
+              <p className="text-gray-700 max-md:text-sm">Dedicated to exceeding customer expectations and ensuring satisfaction in every interaction.</p>
             </Card>
             <Card className="p-6 bg-gray-50 shadow-md rounded-2xl hover:bg-blue-50 transition-colors">
               <History className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold  mb-2">Innovation</h3>
-              <p className="text-gray-700">Continuous improvement, embracing new technologies and innovative solutions.</p>
+              <h3 className="text-2xl max-md:text-lg font-semibold  mb-2">Innovation</h3>
+              <p className="text-gray-700 max-md:text-sm">Continuous improvement, embracing new technologies and innovative solutions.</p>
             </Card>
             <Card className="p-6 bg-gray-50 shadow-md rounded-2xl hover:bg-blue-50 transition-colors">
               <Target className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold mb-2">Sustainability</h3>
-              <p className="text-gray-700">Committed to environmental responsibility through sustainable practices and eco-friendly products.</p>
+              <h3 className="text-2xl max-md:text-lg font-semibold mb-2">Sustainability</h3>
+              <p className="text-gray-700 max-md:text-sm">Committed to environmental responsibility through sustainable practices and eco-friendly products.</p>
             </Card>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function About() {
       
 
       {/* Team */}
-      <section className="py-20">
+      <section className="py-20 max-md:px-10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -91,34 +91,34 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-20">
+      <section className="py-20 max-md:py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center bg-gray-100 p-8 rounded-lg">
-              <Factory className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">State-of-the-art Facility</h3>
-              <p className="text-gray-600">Modern manufacturing facility with latest technology</p>
+            <div className="flex flex-col items-center text-center bg-gray-100 p-8 max-md:p-4 rounded-lg">
+              <Factory className="w-12 h-12 max-md:w-8 max-md:h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl max-md:text-lg font-semibold mb-2">State-of-the-art Facility</h3>
+              <p className="text-gray-600 max-md:text-sm">Modern manufacturing facility with latest technology</p>
             </div>
-            <div className="flex flex-col items-center text-center bg-gray-100 p-8 rounded-lg">
-              <Award className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Quality Certified</h3>
-              <p className="text-gray-600">ISO 9001:2015 certified manufacturing process</p>
+            <div className="flex flex-col items-center text-center bg-gray-100 p-8 max-md:p-4 rounded-lg">
+              <Award className="w-12 h-12  max-md:w-8 max-md:h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl max-md:text-lg font-semibold mb-2">Quality Certified</h3>
+              <p className="text-gray-600 max-md:text-sm">ISO 9001:2015 certified manufacturing process</p>
             </div>
-            <div className="flex flex-col items-center text-center bg-gray-100 p-8 rounded-lg">
-              <Package className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Custom Solutions</h3>
-              <p className="text-gray-600">Tailored packaging solutions for your needs</p>
+            <div className="flex flex-col items-center text-center bg-gray-100 p-8 max-md:p-4 rounded-lg">
+              <Package className="w-12 h-12 max-md:w-8 max-md:h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl max-md:text-lg font-semibold mb-2">Custom Solutions</h3>
+              <p className="text-gray-600 max-md:text-sm">Tailored packaging solutions for your needs</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Products */}
-      <section className="py-10" id="products">
+      <section className="py-10 max-md:py-4" id="products">
         <div className="container mx-auto px-4">
-          <div className="text-4xl flex items-center flex-row gap-4 text-blue-600 font-bold text-center mb-12">
+          <div className="text-4xl max-md:text-2xl flex items-center flex-row gap-4 text-blue-600 font-bold text-center mb-12 max-md:mb-4">
             <h2>Our Products </h2>
-            <ShoppingBag className="h-10 w-10"/>
+            <ShoppingBag className="h-10 w-10 max-md:h-6 max-md:w-6"/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
@@ -131,9 +131,9 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-                  <p className="text-gray-600">{product.description}</p>
+                <CardContent className="p-6 max-md:p-4">
+                  <h3 className="text-xl max-md:text-lg font-semibold mb-2">{product.title}</h3>
+                  <p className="text-gray-600 max-md:text-sm">{product.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -142,16 +142,16 @@ export default function Home() {
       </section>
 
       {/* Clients */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 max-md:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-        <div className="text-4xl flex items-left flex-row gap-4 text-blue-600 font-bold text-center mb-12">
+        <div className="text-4xl max-md:text-2xl flex items-center flex-row gap-4 text-blue-600 font-bold text-center mb-12 max-md:mb-4">
           <h2>Our Trusted Clients </h2>
-          <Handshake className="h-10 w-10"/>
+          <Handshake className="h-10 w-10 max-md:h-6 max-md:w-6"/>
         </div>          
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {clients.map((client, index) => {
             const logoText = client.name[0] + client.name.split(' ')[1][0]
-            return <div key={index} className="border bg-white p-6 rounded-lg shadow w-auto flex flex-row gap-4 items-center justify-start">
+            return <div key={index} className="border bg-white p-6 rounded-lg shadow w-auto flex flex-row gap-4 items-center max-md:justify-between">
               {client.logo 
               ? <Image 
               src={client.logo}
@@ -162,7 +162,7 @@ export default function Home() {
               : <div className="bg-gray-100 flex justify-center items-center p-8 text-black text-xl font-bold w-4 h-4 rounded-full">{logoText}</div>
               }
               
-              <span className="text-lg font-medium text-gray-800">{client.name}</span>
+              <span className="text-lg max-md:text-sm font-medium text-gray-800">{client.name}</span>
             </div>
           })}
           </div>
@@ -172,7 +172,7 @@ export default function Home() {
       {/* Contact */}
       <section className="py-8 pt-12 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
+          <h2 className="text-4xl max-md:text-2xl font-bold text-center mb-12">Contact Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center gap-4 bg-white/10 p-4 rounded-lg">
               <Phone className="w-7 h-7" />
@@ -216,10 +216,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Google Maps Integration */}
       <section className="py-8 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Find Us Here</h2>
+          <h2 className="text-4xl max-md:text-2xl font-bold text-center max-md:mb-4 mb-12">Find Us Here</h2>
           <div className="w-full h-96">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.9224356416426!2d77.8567492893056!3d29.883875630253705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb47109c7ba7b%3A0x3a011fd8ddbd2b1c!2sSunhera%20Rd%2C%20Uttarakhand%20247667!5e0!3m2!1sen!2sin!4v1738418179490!5m2!1sen!2sin" 
