@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[80vh] bg-blue-600">
+      <section className="relative md:h-[80vh] min-h-screen bg-blue-600">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90">
           <Image
             src="https://images.unsplash.com/photo-1621954938124-02e637ba3584?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -64,21 +64,27 @@ export default function Home() {
             className="object-cover mix-blend-overlay"
           />
         </div>
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+        <div className="relative container mx-auto max-md:pt-60 px-4 h-full flex max-md:justify-center items-center">
           <div className="max-w-3xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Leading Plastic Packaging Solutions
             </h1>
             <p className="text-xl mb-8 leading-relaxed">
-              <span className="font-bold px-2 py-1 bg-white text-blue-600">Vinayak Technoplast</span> - Your trusted partner in manufacturing premium quality plastic bottles and packaging solutions since 2019.
+              <span className="font-bold">Vinayak Technoplast</span> - Your trusted partner in manufacturing premium quality plastic bottles and packaging solutions since 2019.
             </p>
-            <div className="flex gap-4">
-              <Button size="lg" variant="secondary" className="font-bold border border-white bg-blue-900 text-white hover:bg-blue-800/90">
-                Explore Products
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/90 text-blue-900 border border-white font-bold hover:text-black">
-                Contact Us
-              </Button>
+            <div className="flex md:flex-row flex-col max-md:w-fit gap-4">
+              <a href="#products">
+                <Button 
+                size="lg" variant="secondary" className="font-bold border border-white bg-blue-900 text-white hover:bg-blue-800/90">
+                  Explore Products
+                </Button>
+              </a>
+              <Link href={"/contact"}>
+                <Button size="lg" variant="outline" className="bg-white/90 text-blue-900 border border-white font-bold hover:text-black">
+                  Contact Us
+                </Button>
+              </Link>
+              
             </div>
           </div>
         </div>
@@ -108,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* Products */}
-      <section className="py-10">
+      <section className="py-10" id="products">
         <div className="container mx-auto px-4">
           <div className="text-4xl flex items-center flex-row gap-4 text-blue-600 font-bold text-center mb-12">
             <h2>Our Products </h2>
@@ -138,11 +144,11 @@ export default function Home() {
       {/* Clients */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-        <div className="text-4xl flex items-center flex-row gap-4 text-blue-600 font-bold text-center mb-12">
+        <div className="text-4xl flex items-left flex-row gap-4 text-blue-600 font-bold text-center mb-12">
           <h2>Our Trusted Clients </h2>
           <Handshake className="h-10 w-10"/>
         </div>          
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {clients.map((client, index) => {
             const logoText = client.name[0] + client.name.split(' ')[1][0]
             return <div key={index} className="border bg-white p-6 rounded-lg shadow w-auto flex flex-row gap-4 items-center justify-start">

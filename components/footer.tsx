@@ -29,7 +29,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="mx-auto">
+          <div className="md:mx-auto">
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
